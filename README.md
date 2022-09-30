@@ -1,5 +1,8 @@
 # Reverse proxy for smartplaylist
 
+Https reverse proxy for other applications.
+
+```sh
 docker run \
     -d --name www \
     --network my-bridge-network \
@@ -7,3 +10,4 @@ docker run \
     -v $(pwd)/certbot/www:/etc/nginx/ssl/live/smartplaylist.me/:ro \
     -v $(pwd)/nginx/conf/:/etc/nginx/conf.d/:ro \
     nginx:1.23-alpine
+```
