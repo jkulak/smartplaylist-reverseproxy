@@ -1,4 +1,4 @@
-# Reverse Proxy for SmartPlaylist
+# Reverse Proxy services
 
 Setup and management of a reverse proxy using Nginx. It redirects traffic from a specified domain/IP and distributes it to other applications based on the rules defined in `nginx/conf/default.conf`. It also manages SSL certification for secure HTTP traffic.
 
