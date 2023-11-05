@@ -1,6 +1,6 @@
 # Reverse Proxy services
 
-Setup and management of a reverse proxy using Nginx. It redirects traffic from a specified domain/IP and distributes it to other applications based on the rules defined in `nginx/conf/default.conf`. It also manages SSL certification for secure HTTP traffic.
+Setup and management of Nginx used as a reverse proxy. It redirects traffic from a specified domain/IP and distributes it to other applications based on the rules defined in `nginx/conf/default.conf`. It also manages SSL certification for secure HTTP traffic.
 
 ## Service Deployment
 
@@ -28,6 +28,10 @@ docker run -d --name reverseproxy --network $NETWORK_NAME \
 ## SSL Certificate Management
 
 The SSL certificates have a 90-day validity and are set to auto-renew every 60 days. Certificates are provided to the reverse proxy container through Docker volumes and can be generated with `certbot` using the `certbot-dns-cloudflare` plugin.
+
+Check the [Certbot documentation](https://certbot.eff.org/docs/using.html) for more information.
+
+List installed certificates, with their validity dates: `certbot certificates`.
 
 ### Certbot Configuration
 
