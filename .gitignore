@@ -1,2 +1,8 @@
 localhost.crt
 localhost.key
+
+# macOS
+.DS_Store
+
+# Local tooling
+.claude/
